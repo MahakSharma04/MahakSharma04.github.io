@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Navbar Example</title>
+  <title>Navbar + Boxes</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
     }
 
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #007BFF; 
+      background-color: #007BFF;
       padding: 15px 30px;
       color: white;
     }
@@ -41,6 +42,46 @@
     .navbar ul li a:hover {
       text-decoration: underline;
     }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 30px;
+      gap: 30px;
+    }
+
+    .box {
+      background-color: white;
+      flex: 1;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box h2 {
+      margin-top: 0;
+    }
+
+    .box p {
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -55,6 +96,22 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
+
+  <div class="container">
+    <!-- Left Box -->
+    <div class="box">
+      <h2>MERN Stack Developer</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus.</p>
+      <p>Fusce nec tellus sed augue semper porta. Mauris massa.</p>
+      <a href="#" class="btn">View My Projects</a>
+    </div>
+
+    <!-- Right Box -->
+    <div class="box">
+      <!-- You can add content here or leave it blank for now -->
+    </div>
+  </div>
 
 </body>
 </html>
