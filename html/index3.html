@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Tags</h1>
+    <!--<form action="service.jsp" method="POST"-->
+    <form>
+        <!-- <p>attributes name and attribute value
+            <input type="text" autofocus required(will work only inside form) placeholder="Enter name" />
+        </p> -->
+        <!-- <p>
+            <input type="text" value="Vaibhavi" readonly />
+        </p> -->
+        <!-- <p>
+            <input type="text" value="Vaibhavi" disabled />
+        </p> -->
+        <p>
+            <input type="text" maxlength="5" size="100"/>
+        </p>
+        <button>Submit</button><!--latest we use this-->
+        <input type="image" src="button.png"><!--work like a submit button-->
+        <input type="submit" value="Submit" >
+        <input type="button" value="Submit" ><!--DOESN'T SUBMIT-->
+        <input type="reset">
+    </form>
+
+    <fieldset>
+        <legend>Login Form</legend>
+    <form>
+        <p><input type="text" placeholder="Enter Name"></p>
+        <p><input type="email" placeholder="Enter Email" /></p>
+        <p><input type="password" placeholder="Enter Password" /></p>
+        <button>Login</button>
+    </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Registration Form</legend>
+    <form>
+        <p><input type="text" placeholder="Enter Name"></p>
+        <p><input type="email" placeholder="Enter Email" /></p>
+        <p><input type="password" placeholder="Enter Password" /></p>
+        <p><input type="date"></p>
+        <p><input type="checkbox" />Java
+            <input type="checkbox" />C++
+            <input type="checkbox" />Python
+        </p>
+
+        <p><!--so that only one gets selected name="batch"-->
+            <input type="radio" name="batch">Morning Batch
+            <input type="radio" name="batch">Evening Batch
+        </p>
+
+        <p>
+            <select multiple>
+                <optgroup label="India">
+                <option>Delhi</option>
+                <option>Bangalore</option>
+                <option>Chennai</option>
+                </optgroup>
+                <optgroup label="USA">
+                <option>Columbus</option>
+                <option>Jacksonville</option>
+                <option>Miami</option>
+            </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <textarea rows="4" cols="50" placeholder="About me"></textarea>
+        </p>
+
+        <p><input type="number" /></p>
+
+        <p><input type="file" /></p>
+
+        <p><input type="color" /></p>
+        
+        <p><label for="chk">Remember Me</label><input type="checkbox" id="chk" /></p>
+
+        <p> <input list="country" />
+            <datalist id="country">
+            <option>India</option>
+            <option>USA</option>
+            <option>Indonesia</option>
+            <option>Australia</option>
+            <option>America</option>
+            <option>Switzerland</option>
+        </datalist></p>
+
+
+        <button>Register</button>
+
+    </form>
+    </fieldset>
+
+</body>
+</html>
