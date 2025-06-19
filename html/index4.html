@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multimedia</h1>
+    <h3>Audio files</h3>
+    <audio controls>
+        <source src="boot.mp3" />
+    </audio>
+    <h3>Video files</h3>
+    <video height="200px" width="300px" controls>
+        <source src="st1.mp4" />
+        <track 
+        src="subtitles1.vtt"
+        kind="subtitles"
+        srclang="en"
+        label="English"
+        /> <track 
+        src="subtitles1.vtt"
+        kind="subtitles"
+        srclang="in"
+        label="Hindi"
+        />
+    </video>
+    <video height="200px" width="300px" autoplay muted controls>
+        <source src="st1.mp4" />
+    </video>
+    <hr/>
+    <svg width="500" height="900">
+        <circle 
+        cx="250"
+        cy="400"
+        r="200"
+        stroke="red"
+        stroke-width="5"
+        fill="pink"
+        />
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="red"/>
+    <text fill="black" font-size="45" font-family="Verdana" x="50" y="60">Zee Cinema</text></svg>
+</body>
+</html>
