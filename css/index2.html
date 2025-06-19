@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* li {
+            display: inline;
+            width: 200px; wis=dth is not applied
+            mostly we use flex in application dev not grid but grid has more functionalities
+        } */
+
+        li{
+            display: inline-block;
+            /* width: 50px; */
+        }
+
+        .flex{
+            display: flex;
+            justify-content: space-around;
+            background-color: yellow;
+            height: 300px;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            column-gap: 20px;
+            row-gap: 30px;
+            background-color: pink;
+            justify-content: space-around;
+            align-items: center;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>css display property</h1>
+    <h2>inline vs inline-block</h2>
+    <ul>
+    <li>Home</li>
+    <li>Services</li>
+    <li>Projects</li>
+    <li>About</li>
+    </ul>
+    <hr />
+
+    <h2>Flexbox</h2>
+    <div class="flex">
+        <div>Child1</div>
+        <div>Child2</div>
+        <div>Child3</div>
+        <div>Child4</div>
+        <div>Child5</div>
+        <div>Child6</div>
+    </div>
+    <hr />
+
+    <h2>Grid</h2>
+    <div class="grid">
+        <div>Child1</div>
+        <div>Child2</div>
+        <div>Child3</div>
+        <div>Child4</div>
+        <div>Child5</div>
+        <div>Child6</div>
+    </div>
+
+</body>
+</html>
