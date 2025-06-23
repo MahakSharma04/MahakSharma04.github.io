@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body onload="showProducts()">
     <h1>Shopping Cart</h1>
     <ul>
-        <li>Home</li>
-        <li>Cart</li>
+      <li onclick="showProducts()">Home</li>
+      <li onclick="showCart()">Cart</li>
     </ul>
-    <hr/>
-    <div id="root">
-    </div>
-    <hr/>
+    <hr />
+    <div id="root"></div>
+    <hr />
     <h4>Shopping Cart. Copyright 2025. All rights reserved.</h4>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
