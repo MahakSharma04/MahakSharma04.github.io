@@ -24,6 +24,9 @@ db.posts.insertMany([
     { _id: "c5", pid: "p2", comment: "Comment3" }
   ]);
     
+db.comments.insertOne({
+     _id: "c6", pid: "p1", comment: "Comment3" 
+})
 
   db.posts.aggregate([//lookup operator is very important - 4 fields
     {
@@ -33,6 +36,7 @@ db.posts.insertMany([
         foreignField: "pid",  // field from comments
         as: "comments"    // name of the array field to add(only for display)
       }
-    }
+    },
+    {$unwind:"$comments"},
+    {$project:{_id:0,posts:1,"comments.comment":1}}
   ])
-  
