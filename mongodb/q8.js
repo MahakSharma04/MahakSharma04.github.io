@@ -96,3 +96,4 @@ db.studentInfo.aggregate([
 }}
 ])
 
+// if multiple collections then lookup-unwind-lookup-unwind-soon... and then group or something
