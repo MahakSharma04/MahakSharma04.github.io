@@ -1,4 +1,4 @@
-//group is very important
+//aggregate, lookup, unwind ,group is very important
 //marks
 
 //name,term,subject,score
