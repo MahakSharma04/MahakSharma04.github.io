@@ -1,8 +1,3 @@
-// email, password given by user if correct then token is generated
-//login and post generates a token
-//token is given in bearer and get and /users
-//if token is correct and role is admin the only users are shown
-
 import express from "express";
 import jwt from "jsonwebtoken";
 const SECRET="bhjhbh";
@@ -26,12 +21,12 @@ const users = [
 ];
 app.use(express.json());
 const authenticate = (req, res, next)=>{
-  //res.json({message:"Access Denied"});
+  
   try{let token = req.headers.authorization;//client token send krega to access the info(the token it got after login successfully and this token is only for john)
   token = token.split(" ")[1];//prefix "bearer" is removed
   const user= jwt.verify(token, SECRET);
   req.role = user.role;
-  next();//will only go to next if role is admin
+  next();
   }catch(err){
     return res.json({message:"Access Denied"});
   }
@@ -65,6 +60,15 @@ app.get("/users", authenticate, authorize("admin"),(req,res)=>{
   res.json(users);
 });
 
-//token-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBlbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTYyNTk2Nn0.lTGgvl-mLhSifxvEnRcX6n4xT5KmnEukFUmJ38FR0fw
-
-//token-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2F0aHkiLCJlbWFpbCI6ImNhdGh5QGVtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MTYyNzM0NX0.RjnH0PgQgpb-HSMlLlTFhIVHXbuiRzYLuRd-_YX-EvE
+app.post("/register", (req,res)=>{
+    const {name, email, password, role} = req.body;
+    const hashedpwd = bcrypt.hash(password, 10);
+    const user = {
+        name,
+        email,
+        password: hashedpwd,
+        role,
+    };
+    users.push(user);
+    res.json(user);
+});
